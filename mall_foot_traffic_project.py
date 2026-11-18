@@ -1,6 +1,4 @@
 # Mall & Retail Foot Traffic Analysis
-# Combined code: foot_traffic.py + plot_traffic.py
-
 # ============================================================
 # Listing 1: foot_traffic.py
 # ============================================================
@@ -39,7 +37,7 @@ FONT = cv2.FONT_HERSHEY_SIMPLEX
 while True:
     ok, frame = cap.read()
     if not ok:
-        break
+ break
     frame_no += 1
 
     result = model.track(
@@ -103,7 +101,6 @@ with open(CSV_PATH, "w", newline="") as f:
 
 print("Entries:", count_in, "Exits:", count_out)
 print("Unique people seen:", len(unique_ids))
-
 
 # ============================================================
 # Listing 2: plot_traffic.py
